@@ -1,6 +1,6 @@
 package Sortcomp;
 
-class Heapsort{
+class Heapsort implements SortingAlgorithm{
 
 
 	public Heapsort(){
@@ -8,6 +8,7 @@ class Heapsort{
 	}
 
 	public Integer[] sort(CompArray a){
+		a.startMeasurement();
 		heapsort(a);
 		return a.getData();
 	}

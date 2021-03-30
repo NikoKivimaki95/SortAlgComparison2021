@@ -1,12 +1,13 @@
 package Sortcomp;
 
-class Quicksort{
+class Quicksort implements SortingAlgorithm{
 
 	public Quicksort(){
 
 	}
 
 	public Integer[] sort(CompArray a){
+		a.startMeasurement();
 		quicksort(a, 0, a.getLength()-1);
 		return a.getData();
 	}

@@ -3,18 +3,18 @@ package Sortcomp;
 public class Application {
 	
 	public static void main(String[] args) {
-		Bubblesort bs = new Bubblesort();
-		Heapsort hs = new Heapsort();
-		Quicksort qs = new Quicksort();
+
+		BackEndHandler beh = new BackEndHandler();
 		
-		int len = 10000;
+		int len = 100000;
 		
-		Integer[] data = bs.sort(new CompArray(len));
-		System.out.println("Comparisons: "+data[0]+" Swaps: "+data[1]);
-		Integer[] data2 = hs.sort(new CompArray(len));
-		System.out.println("Comparisons: "+data2[0]+" Swaps: "+data2[1]);
-		Integer[] data3 = qs.sort(new CompArray(len));
-		System.out.println("Comparisons: "+data3[0]+" Swaps: "+data3[1]);
+		System.out.println(beh.testAlgorithms(new boolean[]{true, false, false}, 1000));
+		
+		beh.runAll(1);
+		beh.runAll(10);
+		beh.runAll(100);
+		beh.runAll(1000);
+		beh.runAll(10000);
 		
 		
 	}

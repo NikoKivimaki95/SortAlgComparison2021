@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Arrays;
 
-
 public class CompArray {
 
 	private Integer[] arr;
@@ -12,11 +11,18 @@ public class CompArray {
 	private int comparisons;
 	private int switches;
 	
+	private TimeMeasure tm;
+	
 	public CompArray(int length) {
 		this.arr = new Integer[length];
 		this.comparisons = 0;
 		this.switches = 0;
+		this.tm = new TimeMeasure();
 		generateArray(length);
+	}
+	
+	public void startMeasurement() {
+		tm.startTimer();
 	}
 	
 	//Generates randomized array
@@ -121,6 +127,12 @@ public class CompArray {
 	}
 	
 	public Integer[] getData() {
-		return new Integer[]{comparisons, switches};
+		if(comparisons < 0) {
+			comparisons = 0;
+		}
+		if(switches < 0) {
+			switches = 0;
+		}
+		return new Integer[]{comparisons, switches, tm.stopTimer()};
 	}
 }

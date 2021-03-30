@@ -1,12 +1,13 @@
 package Sortcomp;
 
-class Bubblesort{
+class Bubblesort implements SortingAlgorithm{
 
 	public Bubblesort(){
 
 	}
 
 	public Integer[] sort(CompArray a){
+		a.startMeasurement();
 		bubblesort(a);
 		return a.getData();
 	}
