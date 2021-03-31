@@ -40,4 +40,21 @@ public class BackEndHandler {
 					+ "Swaps: "+returnData[1]+" Time (ms): "+returnData[2]);
 		}
 	}
+	
+	public ArrayList<SortingAlgorithm> getAlgorithms(){
+		return this.algorithms;
+	}
+	
+	public ArrayList<Integer[]> runAlgorithms(boolean[] algorithms, int length) {
+		if(algorithms.length == this.algorithms.size()) {
+			ArrayList<Integer[]> returnData = new ArrayList<Integer[]>();
+			for(SortingAlgorithm alg : this.algorithms) {
+				returnData.add(alg.sort(new CompArray(length)));
+			}
+			return returnData;
+		}
+		else {
+			return null;
+		}
+	}
 }
