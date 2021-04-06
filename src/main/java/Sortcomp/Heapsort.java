@@ -49,4 +49,8 @@ class Heapsort implements SortingAlgorithm{
 			heapify(a, n, largest); 
 		} 
 	}
+	
+	public String getName() {
+		return "Heapsort";
+	}
 }

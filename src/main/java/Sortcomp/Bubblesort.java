@@ -22,4 +22,8 @@ class Bubblesort implements SortingAlgorithm{
 			}
 		}
 	}
+	
+	public String getName() {
+		return "Bubblesort";
+	}
 }

@@ -57,4 +57,8 @@ public class BackEndHandler {
 			return null;
 		}
 	}
+	
+	public String getName(int index) {
+		return this.algorithms.get(index).getName();
+	}
 }

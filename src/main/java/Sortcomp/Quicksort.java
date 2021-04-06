@@ -48,4 +48,8 @@ class Quicksort implements SortingAlgorithm{
 		a.swap(i, high); //swap a+1 and pivot
 		return i;
 	}
+	
+	public String getName() {
+		return "Quicksort";
+	}
 }
