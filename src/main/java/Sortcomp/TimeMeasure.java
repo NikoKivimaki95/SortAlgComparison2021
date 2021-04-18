@@ -1,7 +1,5 @@
 package Sortcomp;
 
-import java.util.concurrent.TimeUnit;
-
 public class TimeMeasure {
 	
 	private long startTime;

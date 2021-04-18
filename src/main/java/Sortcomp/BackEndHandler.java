@@ -1,6 +1,5 @@
 package Sortcomp;
 
-import java.awt.TextArea;
 import java.util.ArrayList;
 
 public class BackEndHandler {
