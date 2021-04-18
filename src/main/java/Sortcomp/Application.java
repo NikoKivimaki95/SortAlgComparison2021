@@ -1,21 +1,21 @@
 package Sortcomp;
 
-public class Application {
-	
-	public static void main(String[] args) {
+import javax.swing.SwingUtilities;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import java.awt.BorderLayout;
 
-		BackEndHandler beh = new BackEndHandler();
-		
-		int len = 100000;
-		
-		System.out.println(beh.testAlgorithms(new boolean[]{true, false, false}, 1000));
-		
-		beh.runAll(1);
-		beh.runAll(10);
-		beh.runAll(100);
-		beh.runAll(1000);
-		beh.runAll(10000);
-		
-		
-	}
+class Application {
+    public static void main(String args[]) {
+    	
+    	SwingUtilities.invokeLater(new Runnable() {
+    		public void run() {
+    			JFrame frame = new UI("Algoritmien vertailu");
+    	        frame.setSize(320, 610);
+    	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	        frame.setVisible(true);
+    	        frame.setResizable(false);
+    		}
+    	});
+    }
 }

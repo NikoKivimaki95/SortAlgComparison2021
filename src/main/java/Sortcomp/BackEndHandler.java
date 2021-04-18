@@ -1,5 +1,6 @@
 package Sortcomp;
 
+import java.awt.TextArea;
 import java.util.ArrayList;
 
 public class BackEndHandler {
@@ -33,15 +34,15 @@ public class BackEndHandler {
 		return isSorted;
 	}
 	
-	public void runAll(int length) {
-		for(SortingAlgorithm alg : this.algorithms) {
-			Integer[] returnData = alg.sort(new CompArray(length));
-			System.out.println("Comparisons: "+returnData[0]+" "
-					+ "Swaps: "+returnData[1]+" Time (ms): "+returnData[2]);
-		}
-	}
+	 public void runAll(int length) {
+		  for(SortingAlgorithm alg : this.algorithms) {
+		   Integer[] returnData = alg.sort(new CompArray(length));
+		   System.out.println("Comparisons: "+returnData[0]+" "
+				     + "Swaps: "+returnData[1]+" Time (ms): "+returnData[2]);
+		  }
+		 }
 	
-	public ArrayList<SortingAlgorithm> getAlgorithms(){
+	public  ArrayList<SortingAlgorithm> getAlgorithms(){
 		return this.algorithms;
 	}
 	
